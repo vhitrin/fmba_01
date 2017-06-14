@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+      <HBox>
+          <Button mnemonicParsing="false" onMouseClicked="#ImportFromExcelOnAction" text="Прочитать данные Excel" />
+          <Button mnemonicParsing="false" onMouseClicked="#CalculateOnAction" text="Рассчитать показатели" />
+          <Button mnemonicParsing="false" onMouseClicked="#CalculateAgeOnAction" text="Распределить по возрасту" />
+          <Button mnemonicParsing="false" onMouseClicked="#ShowSummaryResultOnAction" text="Итоговая таблица" />
+      </HBox>
+      <TableView fx:id="dataInputTable">
+          <columns>
+              <TableColumn fx:id="ageColumn" prefWidth="75.0" text="Age" />
+              <TableColumn fx:id="typeCitizensColumn" prefWidth="75.0" text="Type citizens" />
+              <TableColumn fx:id="populationColumn" prefWidth="75.0" text="Population" />
+              <TableColumn fx:id="numberOfDeathsColumn" prefWidth="75.0" text="Number of deaths" />
+              <TableColumn fx:id="deathRateColumn" prefWidth="75.0" text="Death-rate" />
+          </columns>
+      </TableView>
+</VBox>
