@@ -4,89 +4,89 @@ import javafx.beans.property.*;
 
 public class DataInputString {
 
-    private final StringProperty age;
-    private final StringProperty typeCitizens;
-    private final FloatProperty population;
-    private final FloatProperty numberOfDeath;
-    private final FloatProperty deathRate;
+    private final StringProperty D1;
+    private final StringProperty P1;
+    private final FloatProperty V1;
+    private final FloatProperty V2;
+    private final FloatProperty V3;
 
     public DataInputString() {
         this(null, null, 0, 0);
     }
 
-    public DataInputString(String age, String typeCitizens, float population, float numberOfDeath) {
-        this.age = new SimpleStringProperty(age);
-        this.typeCitizens = new SimpleStringProperty(typeCitizens);
-        this.population = new SimpleFloatProperty(population);
-        this.numberOfDeath = new SimpleFloatProperty(numberOfDeath);
-        this.deathRate = new SimpleFloatProperty((numberOfDeath / population) * 100);
+    public DataInputString(String D1, String P1, float V1, float V2) {
+        this.D1 = new SimpleStringProperty(D1);
+        this.P1 = new SimpleStringProperty(P1);
+        this.V1 = new SimpleFloatProperty(V1);
+        this.V2 = new SimpleFloatProperty(V2);
+        this.V3 = new SimpleFloatProperty((V2 / V1) * 100);
     }
 
-    public DataInputString(String age, String typeCitizens, float population, float numberOfDeath, float deathRate) {
-        this.age = new SimpleStringProperty(age);
-        this.typeCitizens = new SimpleStringProperty(typeCitizens);
-        this.population = new SimpleFloatProperty(population);
-        this.numberOfDeath = new SimpleFloatProperty(numberOfDeath);
-        this.deathRate = new SimpleFloatProperty(deathRate);
+    public DataInputString(String D1, String P1, float V1, float V2, float V3) {
+        this.D1 = new SimpleStringProperty(D1);
+        this.P1 = new SimpleStringProperty(P1);
+        this.V1 = new SimpleFloatProperty(V1);
+        this.V2 = new SimpleFloatProperty(V2);
+        this.V3 = new SimpleFloatProperty(V3);
     }
 
-    public String getAge() {
-        return age.get();
+    public String getD1() {
+        return D1.get();
     }
 
-    public StringProperty ageProperty() {
-        return age;
+    public StringProperty D1Property() {
+        return D1;
     }
 
-    public void setAge(String age) {
-        this.age.set(age);
+    public void setD1(String d1) {
+        this.D1.set(d1);
     }
 
-    public String getTypeCitizens() {
-        return typeCitizens.get();
+    public String getP1() {
+        return P1.get();
     }
 
-    public StringProperty typeCitizensProperty() {
-        return typeCitizens;
+    public StringProperty P1Property() {
+        return P1;
     }
 
-    public void setTypeCitizens(String typeCitizens) {
-        this.typeCitizens.set(typeCitizens);
+    public void setP1(String p1) {
+        this.P1.set(p1);
     }
 
-    public float getPopulation() {
-        return population.get();
+    public float getV1() {
+        return V1.get();
     }
 
-    public FloatProperty populationProperty() {
-        return population;
+    public FloatProperty V1Property() {
+        return V1;
     }
 
-    public void setPopulation(float population) {
-        this.population.set(population);
+    public void setV1(float v1) {
+        this.V1.set(v1);
     }
 
-    public float getNumberOfDeath() {
-        return numberOfDeath.get();
+    public float getV2() {
+        return V2.get();
     }
 
-    public FloatProperty numberOfDeathProperty() {
-        return numberOfDeath;
+    public FloatProperty V2Property() {
+        return V2;
     }
 
-    public void setNumberOfDeath(float numberOfDeath) {
-        this.numberOfDeath.set(numberOfDeath);
+    public void setV2(float v2) {
+        this.V2.set(v2);
     }
 
-    public float getDeathRate() {
-        return deathRate.get();
+    public float getV3() {
+        return V3.get();
     }
 
-    public FloatProperty deathRateProperty() {
-        return deathRate;
+    public FloatProperty V3Property() {
+        return V3;
     }
 
-    public void setDeathRate(float deathRate) {
-        this.deathRate.set(deathRate);
+    public void setV3(float v3) {
+        this.V3.set(v3);
     }
 }

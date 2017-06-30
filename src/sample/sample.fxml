@@ -7,19 +7,23 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-      <HBox>
-          <Button mnemonicParsing="false" onMouseClicked="#ImportFromExcelOnAction" text="Прочитать данные Excel" />
-          <Button mnemonicParsing="false" onMouseClicked="#CalculateOnAction" text="Рассчитать показатели" />
-          <Button mnemonicParsing="false" onMouseClicked="#CalculateAgeOnAction" text="Распределить по возрасту" />
-          <Button mnemonicParsing="false" onMouseClicked="#ShowSummaryResultOnAction" text="Итоговая таблица" />
-      </HBox>
-      <TableView fx:id="dataInputTable">
-          <columns>
-              <TableColumn fx:id="ageColumn" prefWidth="75.0" text="Age" />
-              <TableColumn fx:id="typeCitizensColumn" prefWidth="75.0" text="Type citizens" />
-              <TableColumn fx:id="populationColumn" prefWidth="75.0" text="Population" />
-              <TableColumn fx:id="numberOfDeathsColumn" prefWidth="75.0" text="Number of deaths" />
-              <TableColumn fx:id="deathRateColumn" prefWidth="75.0" text="Death-rate" />
-          </columns>
-      </TableView>
+    <HBox>
+        <Button mnemonicParsing="false" onMouseClicked="#ReadDataFromDBOnAction" text="Прочитать данные из базы" />
+        <Button mnemonicParsing="false" onMouseClicked="#CalculateOnAction" text="Рассчитать показатели" />
+        <Button mnemonicParsing="false" onMouseClicked="#CalculateD1OnAction" text="Распределить по группам" />
+        <Button mnemonicParsing="false" onMouseClicked="#ShowSummaryResultOnAction" text="Итоговая таблица" />
+    </HBox>
+    <TableView fx:id="dataInputTable">
+        <columns>
+            <TableColumn fx:id="D1Column" prefWidth="112.0"/>
+            <TableColumn fx:id="P1Column" prefWidth="112.0"/>
+            <TableColumn fx:id="V1Column" prefWidth="112.0"/>
+            <TableColumn fx:id="V2Column" prefWidth="112.0"/>
+            <TableColumn fx:id="V3Column" prefWidth="112.0"/>
+        </columns>
+    </TableView>
+    <HBox>
+        <Button mnemonicParsing="false" onMouseClicked="#ImportFromExcelOnAction" text="Прочитать данные из Excel" />
+        <Button mnemonicParsing="false" onMouseClicked="#ExportTableToExcelOnAction" text="Выгрузить данные в Excel" />
+    </HBox>
 </VBox>
