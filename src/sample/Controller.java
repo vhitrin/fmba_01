@@ -252,6 +252,8 @@ public class Controller {
 
         book.write(new FileOutputStream(file));
         book.close();
+
+        System.out.println("Writing data complete!");
     }
 
     public void ReadDataFromDBOnAction() {
@@ -282,9 +284,9 @@ public class Controller {
 
         while (rs.next()) {
             dataInputStringObservableList.add(new DataInputString(rs.getString("D1"),
-                                                                    rs.getString("P1"),
-                                                                    rs.getInt("V1"),
-                                                                    rs.getInt("V2")));
+                    rs.getString("P1"),
+                    rs.getInt("V1"),
+                    rs.getInt("V2")));
         }
     }
 
